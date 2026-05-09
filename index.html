@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imdad Burki | Multi-Disciplinary Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio for Imdad Burki — builder, creator, strategist, and operator across multiple domains."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #060911;
+        --panel: #0d1424;
+        --text: #f3f7ff;
+        --muted: #a6b2c8;
+        --primary: #59f0ff;
+        --accent: #8c73ff;
+        --ring: rgba(89, 240, 255, 0.35);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 10% 5%, #1b2a4a 0%, transparent 35%),
+          radial-gradient(circle at 90% 10%, #2d1454 0%, transparent 30%),
+          var(--bg);
+        line-height: 1.55;
+      }
+
+      .wrap { width: min(1100px, 92vw); margin: 0 auto; }
+
+      nav {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(10px);
+        background: rgba(6, 9, 17, 0.75);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        z-index: 10;
+      }
+
+      .nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem 0;
+      }
+
+      .brand { font-weight: 800; letter-spacing: 0.06em; }
+      .brand span { color: var(--primary); }
+
+      .links { display: flex; gap: 1rem; flex-wrap: wrap; }
+      .links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 180ms ease;
+      }
+      .links a:hover { color: var(--primary); }
+
+      .hero { padding: 5.8rem 0 4rem; }
+      .kicker {
+        display: inline-flex;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--primary);
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1.06;
+        margin: 0.9rem 0 0.8rem;
+      }
+
+      .grad {
+        background: linear-gradient(100deg, var(--primary), #97b4ff 45%, #c89bff 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
+        max-width: 70ch;
+      }
+
+      .cta { margin-top: 1.6rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+      .btn {
+        display: inline-block;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 700;
+        padding: 0.7rem 1rem;
+        border-radius: 0.8rem;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      .btn.primary {
+        background: linear-gradient(100deg, var(--primary), var(--accent));
+        color: #05070d;
+        border: none;
+      }
+
+      section { padding: 1.6rem 0 2rem; }
+      .title { font-size: clamp(1.4rem, 2.5vw, 2rem); margin: 0 0 1rem; }
+      .sub { color: var(--muted); margin: 0 0 1.4rem; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        background: linear-gradient(170deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      .card h3 { margin-top: 0; margin-bottom: 0.45rem; }
+      .card p { margin: 0; color: var(--muted); }
+
+      .timeline .item { margin-bottom: 1rem; }
+      .timeline .item h4 { margin: 0 0 0.35rem; }
+      .timeline .item p { margin: 0; color: var(--muted); }
+
+      form {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      input, textarea {
+        width: 100%;
+        border-radius: 0.7rem;
+        border: 1px solid rgba(255,255,255,0.16);
+        background: rgba(255,255,255,0.04);
+        color: var(--text);
+        font: inherit;
+        padding: 0.75rem 0.85rem;
+      }
+
+      input:focus, textarea:focus {
+        outline: 2px solid var(--ring);
+        border-color: transparent;
+      }
+
+      footer {
+        color: var(--muted);
+        border-top: 1px solid rgba(255,255,255,0.08);
+        margin-top: 1rem;
+      }
+
+      footer .wrap { padding: 1.2rem 0 2.4rem; }
+
+      @media (max-width: 600px) {
+        .nav-row { align-items: flex-start; flex-direction: column; gap: 0.6rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap nav-row">
+        <div class="brand">IMDAD<span>.WORK</span></div>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero wrap">
+      <span class="kicker">MULTI-DISCIPLINARY PORTFOLIO</span>
+      <h1>
+        I build at the intersection of
+        <span class="grad">strategy, technology, design, and execution.</span>
+      </h1>
+      <p class="lead">
+        Hey, I’m <strong>Imdad Burki</strong>. I work across multiple domains — from product and business to creative direction and implementation — turning ambitious ideas into measurable outcomes.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#work">View Featured Projects</a>
+        <a class="btn" href="#contact">Let’s Collaborate</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="about">
+        <h2 class="title">About Me</h2>
+        <p class="sub">
+          I’m a generalist by design and a specialist by delivery. I thrive in 0→1 environments, scale systems with clarity, and bring both speed and structure to every project.
+        </p>
+      </section>
+
+      <section id="work">
+        <h2 class="title">Featured Work</h2>
+        <p class="sub">Swap these with your real projects and links as you grow.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>Product Launch Engine</h3>
+            <p>Built GTM strategy, landing pages, and analytics stack for a fast-growth digital offer.</p>
+          </article>
+          <article class="card">
+            <h3>Automation + Ops Stack</h3>
+            <p>Designed systems to reduce repetitive workload and speed decision-making using dashboards.</p>
+          </article>
+          <article class="card">
+            <h3>Brand + Content Direction</h3>
+            <p>Crafted consistent voice and visual narrative across social, web, and campaign touchpoints.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="title">Skills & Capabilities</h2>
+        <div class="grid">
+          <article class="card"><h3>Business</h3><p>Offer design, growth strategy, sales messaging.</p></article>
+          <article class="card"><h3>Tech</h3><p>Web development, automation, analytics tooling.</p></article>
+          <article class="card"><h3>Creative</h3><p>Brand systems, content strategy, storytelling.</p></article>
+          <article class="card"><h3>Execution</h3><p>Project leadership, cross-functional delivery, iteration.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="title">Journey</h2>
+        <div class="timeline">
+          <div class="item">
+            <h4>2026 — Building a multi-vertical portfolio</h4>
+            <p>Combining product, growth, and creative systems into one cohesive personal brand.</p>
+          </div>
+          <div class="item">
+            <h4>2025 — Systems and scale</h4>
+            <p>Focused on process design, automation, and performance reporting.</p>
+          </div>
+          <div class="item">
+            <h4>2024 — Foundation and experimentation</h4>
+            <p>Explored multiple disciplines and validated strengths through shipped work.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="title">Let’s Build Something Exceptional</h2>
+        <p class="sub">Use this form as a placeholder, or connect it to Formspree / your backend later.</p>
+        <form>
+          <label>
+            Name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="your@email.com" />
+          </label>
+          <label>
+            Message
+            <textarea rows="4" placeholder="Tell me about your project"></textarea>
+          </label>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">© 2026 Imdad Burki — Built to evolve.</div>
+    </footer>
+  </body>
+</html>
